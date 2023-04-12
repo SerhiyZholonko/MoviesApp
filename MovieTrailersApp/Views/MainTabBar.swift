@@ -8,26 +8,35 @@
 import SwiftUI
 
 struct MainTabBar: View {
+    @StateObject var viewModel = MovieViewModel()
+    init() {
+          UITabBar.appearance().backgroundColor = UIColor.white
+      }
     var body: some View {
-        TabView {
-            Text("First View")
-                .tabItem {
-                    Image(systemName: "1.circle")
-                    Text("First")
-                }
-            
-            Text("Second View")
-                .tabItem {
-                    Image(systemName: "2.circle")
-                    Text("Second")
-                }
-            
-            Text("Third View")
-                .tabItem {
-                    Image(systemName: "3.circle")
-                    Text("Third")
-                }
-        }
+            TabView {
+                            NavigationView {
+                                MoviesView()
+                                    .environmentObject(viewModel)
+                            }
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+                Text("Search")
+                    .tabItem {
+                        Label("Search", systemImage: "magnifyingglass")
+                    }
+                Text("Likes")
+                    .tabItem {
+                        Label("Likes", systemImage: "heart")
+                    }
+                Text("Settings")
+                    .tabItem {
+                        Label("Settings", systemImage: "gearshape")
+                    }
+            }
+            .background(Color.blue) // Set the background color of the TabView to blue
+
+
     }
 }
 

@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import WebKit
 
 struct PlayerView: View {
+    let webView = WKWebView()
+    let url = URL(string: "https://www.google.com")!
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        WebView(url: url)
     }
 }
 
