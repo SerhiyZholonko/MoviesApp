@@ -6,13 +6,36 @@
 //
 
 import SwiftUI
-import WebKit
+import YouTubePlayerKit
 
 struct PlayerView: View {
-    let webView = WKWebView()
-    let url = URL(string: "https://www.google.com")!
+    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var viewModel: MovieDetailViewModel
     var body: some View {
-        WebView(url: url)
+        ZStack {
+            YouTubePlayerView(viewModel.youtubeStringUrl)
+            Button {
+                presentationMode.wrappedValue.dismiss()
+
+            } label: {
+                VStack {
+                    
+                    HStack {
+                        Spacer()
+                        Image(systemName: "xmark")
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(.white)
+                            .padding(.top, 50)
+                            .padding(.trailing, 20)
+                    }
+                   
+                    Spacer()
+                }
+               
+            }
+
+
+        }
     }
 }
 
@@ -21,3 +44,6 @@ struct PlayerView_Previews: PreviewProvider {
         PlayerView()
     }
 }
+
+
+

@@ -9,16 +9,21 @@ import SwiftUI
 
 struct MoviesView: View {
     @EnvironmentObject var viewModel: MovieViewModel
-    
+
     var body: some View {
         ScrollView {
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
                 ForEach(viewModel.moviews, id: \.id ) { movie in
-                    NavigationLink(destination: DetaillMovieView(viewModle: MovieDetailViewModel(movie: movie))) {
-                        MovieView(movie: movie)
-                            .frame(width: (UIScreen.main.bounds.width - 50) / 2, height: 200)
-                    }
+                    NavigationLink(destination: DetaillMovieView(viewModel: MovieDetailViewModel(detailMovie: movie))
+                            .environmentObject(viewModel)
+                        ){
+                            MovieView(movie: movie)
+                                .frame(width: (UIScreen.main.bounds.width - 50) / 2, height: 200)
+                                .environmentObject(viewModel)
+
+                        }
                 }
+              
             }
             .padding()
         }
@@ -26,14 +31,3 @@ struct MoviesView: View {
     }
 }
 
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            MoviesView()
-                .navigationTitle("Movies")
-                .environmentObject(MovieViewModel())
-        }
-        
-    }
-}

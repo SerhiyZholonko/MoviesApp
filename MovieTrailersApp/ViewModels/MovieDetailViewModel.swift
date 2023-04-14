@@ -6,22 +6,52 @@
 //
 
 import SwiftUI
+import Alamofire
+import Combine
+import YouTubePlayerKit
 
 
 final class MovieDetailViewModel: ObservableObject {
+    @Published var detailMovie: Movie
+    @Published var id: Int {
+        didSet {
+            parseJson()
+        }
+    }
     @Published var title: String = ""
     @Published var stringUrl: String = ""
     @Published var stringBagroundImage: String = ""
     @Published var description = ""
-    @State  var isPlayer: Bool = false
+    @Published var youtubeStringUrl: YouTubePlayer = "https://youtube.com/watch?v=psL_5RIBqnY"
+    @Published var voluteCount: String = ""
+    @Published var reliseDate: String = ""
 
-    init(movie: Movie){
-        self.title = movie.title
-        self.stringUrl = movie.posterPath
-        self.stringBagroundImage = movie.backdropPath
-        self.description = movie.overview
+    init(detailMovie: Movie) {
+        self.detailMovie = detailMovie
+        title = detailMovie.title
+        stringUrl = detailMovie.posterPath
+        stringBagroundImage = detailMovie.backdropPath
+        description = detailMovie.overview
+        voluteCount =  "Vote: \(detailMovie.voteAverage) "
+        reliseDate =  "Date relise: "+detailMovie.releaseDate
+        id = detailMovie.id
+        parseJson()
     }
-    public func isPlayerChange() {
-       isPlayer.toggle()
+//TODO: -  loadmanager
+    func parseJson() {
+        AF.request("https://api.themoviedb.org/3/movie/\(id)/videos?api_key=\(Constants.share.apiKey)&language=en-US")
+                       .validate()
+                       .responseDecodable(of: YoutubeVideoModel.self) { [weak self] response in
+                           switch response.result {
+                           case .success(let curentResult):
+                               print("TEST: ",curentResult)
+                               if let last = curentResult.results.last {
+                                   self?.youtubeStringUrl =   YouTubePlayer(stringLiteral: "https://www.youtube.com/watch?v=\(last.key)")
+
+                               }
+                           case .failure(let error):
+                               print(error.localizedDescription)
+                           }
+                       }
     }
 }
