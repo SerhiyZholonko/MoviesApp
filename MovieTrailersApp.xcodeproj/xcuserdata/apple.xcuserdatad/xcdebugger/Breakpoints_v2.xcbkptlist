@@ -14,8 +14,8 @@
             filePath = "MovieTrailersApp/ViewModels/MovieViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "parseJson()"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "MovieTrailersApp/ViewModels/MovieViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "parseJson()"
             landmarkType = "7">
          </BreakpointContent>
@@ -66,174 +66,6 @@
             endingLineNumber = "22"
             landmarkName = "body"
             landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "77E20A5E-C13E-4591-B612-A0171FE83057"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MovieTrailersApp/ViewModels/MovieViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "MovieViewModel"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "77E20A5E-C13E-4591-B612-A0171FE83057 - 535449c2ba4c81e9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "property wrapper backing initializer of MovieTrailersApp.MovieViewModel.id : Swift.Int"
-                  moduleName = "MovieTrailersApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/MovieTrailersApp/MovieTrailersApp/ViewModels/MovieViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "28">
-               </Location>
-               <Location
-                  uuid = "77E20A5E-C13E-4591-B612-A0171FE83057 - 4633b8f8e081b9c3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieTrailersApp.MovieViewModel.id.getter : Swift.Int"
-                  moduleName = "MovieTrailersApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/MovieTrailersApp/MovieTrailersApp/ViewModels/MovieViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  uuid = "77E20A5E-C13E-4591-B612-A0171FE83057 - ac8edd4648a24ddf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieTrailersApp.MovieViewModel.id.setter : Swift.Int"
-                  moduleName = "MovieTrailersApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/MovieTrailersApp/MovieTrailersApp/ViewModels/MovieViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  uuid = "77E20A5E-C13E-4591-B612-A0171FE83057 - c4f0930626c5ace"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieTrailersApp.MovieViewModel.id.modify : Swift.Int"
-                  moduleName = "MovieTrailersApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/MovieTrailersApp/MovieTrailersApp/ViewModels/MovieViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  uuid = "77E20A5E-C13E-4591-B612-A0171FE83057 - 339cf14275676edf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieTrailersApp.MovieViewModel.id.modify : Swift.Int with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "MovieTrailersApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/MovieTrailersApp/MovieTrailersApp/ViewModels/MovieViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  uuid = "77E20A5E-C13E-4591-B612-A0171FE83057 - a38dc7f3822cff24"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieTrailersApp.MovieViewModel.$id.getter : Combine.Published&lt;Swift.Int&gt;.Publisher"
-                  moduleName = "MovieTrailersApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/MovieTrailersApp/MovieTrailersApp/ViewModels/MovieViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  uuid = "77E20A5E-C13E-4591-B612-A0171FE83057 - a5bf978c814b2730"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieTrailersApp.MovieViewModel.$id.setter : Combine.Published&lt;Swift.Int&gt;.Publisher"
-                  moduleName = "MovieTrailersApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/MovieTrailersApp/MovieTrailersApp/ViewModels/MovieViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "196">
-               </Location>
-               <Location
-                  uuid = "77E20A5E-C13E-4591-B612-A0171FE83057 - a1739c9fc7fbe8c1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieTrailersApp.MovieViewModel.$id.modify : Combine.Published&lt;Swift.Int&gt;.Publisher"
-                  moduleName = "MovieTrailersApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/MovieTrailersApp/%3Ccompiler-generated%3E"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "56">
-               </Location>
-               <Location
-                  uuid = "77E20A5E-C13E-4591-B612-A0171FE83057 - e2ac06f91ac3cb04"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieTrailersApp.MovieViewModel.$id.modify : Combine.Published&lt;Swift.Int&gt;.Publisher with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "MovieTrailersApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/MovieTrailersApp/MovieTrailersApp/ViewModels/MovieViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  uuid = "77E20A5E-C13E-4591-B612-A0171FE83057 - 567d432c2075ec40"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieTrailersApp.MovieViewModel.init() -&gt; MovieTrailersApp.MovieViewModel"
-                  moduleName = "MovieTrailersApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/MovieTrailersApp/MovieTrailersApp/ViewModels/MovieViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "272">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

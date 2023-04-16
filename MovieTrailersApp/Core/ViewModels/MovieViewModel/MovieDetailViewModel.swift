@@ -54,4 +54,17 @@ final class MovieDetailViewModel: ObservableObject {
                            }
                        }
     }
+    func addLike() {
+        let movies: [MovieEntity] = CoreDataManager.shared.fetchData(entityName: "MovieEntity")
+        for movie in movies {
+            if movie.id == id {
+                return
+            }
+        }
+        let movie = MovieEntity(context: CoreDataManager.shared.managedObjectContext)
+        movie.id = Int64(id)
+        movie.title = title
+        movie.stringUrl = stringUrl
+        CoreDataManager.shared.save(movie)
+    }
 }

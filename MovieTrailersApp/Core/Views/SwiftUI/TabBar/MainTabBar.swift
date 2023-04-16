@@ -21,11 +21,15 @@ struct MainTabBar: View {
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }
-                Text("Search")
+                NavigationView {
+                    SearchView()
+                }
                     .tabItem {
                         Label("Search", systemImage: "magnifyingglass")
                     }
-                Text("Likes")
+                NavigationView {
+                    FavoriteView()
+                }
                     .tabItem {
                         Label("Likes", systemImage: "heart")
                     }

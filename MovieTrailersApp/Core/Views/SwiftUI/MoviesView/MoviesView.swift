@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct MoviesView: View {
     @EnvironmentObject var viewModel: MovieViewModel
 
@@ -20,14 +21,14 @@ struct MoviesView: View {
                             MovieView(movie: movie)
                                 .frame(width: (UIScreen.main.bounds.width - 50) / 2, height: 200)
                                 .environmentObject(viewModel)
-
+                                .onAppear {
+                                    viewModel.loadNextPage(currentItem: movie)
+                                }
                         }
                 }
-              
             }
             .padding()
         }
         .navigationTitle("Movies")
     }
 }
-

@@ -15,6 +15,8 @@ struct MovieTrailersAppApp: App {
         WindowGroup {
             MainTabBar()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .navigationViewStyle(StackNavigationViewStyle())
+
         }
     }
 }

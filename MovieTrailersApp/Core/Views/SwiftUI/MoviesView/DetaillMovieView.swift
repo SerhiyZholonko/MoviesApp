@@ -21,9 +21,10 @@ struct DetaillMovieView: View{
                     ZStack{
                         WebImage(url: URL(string: "https://image.tmdb.org/t/p/w500" + viewModel.stringBagroundImage))
                             .resizable()
-                            .frame( height: 200)
                             .cornerRadius(10)
                             .shadow(color: .blue.opacity(0.5), radius: 10, x: 0, y: 20)
+                            .padding(.trailing, 20)
+                            .padding(.bottom, 20)
                         Button {
                             self.isPresent.toggle()
                         } label: {
@@ -36,15 +37,36 @@ struct DetaillMovieView: View{
                             PlayerView()
                                 .environmentObject(viewModel)
                         }
+                        VStack {
+                            Spacer()
+                            HStack {
+                                Spacer()
+                                Button {
+                                    viewModel.addLike()
+                                } label: {
+                                    Image(systemName: "heart.fill")
+                                        .font(.system(size: 50))
+                                        .foregroundColor(.pink)
+                                }
+
+                            }
+                        }
                     }
+                    .frame( height: 200)
+
                 }
                 VStack(spacing: 20){
                     HStack{
+                        ZStack {
+                            
+                        
                         WebImage(url: URL(string: "https://image.tmdb.org/t/p/w500" + viewModel.stringUrl))
                             .resizable()
                             .frame(width: 150, height: 200)
                             .cornerRadius(10)
                             .shadow(color: .blue.opacity(0.5), radius: 10, x: 0, y: 20)
+                   
+                    }
                         VStack(alignment: .leading, spacing: 8){
                             Spacer()
                                 .frame(height: 5)

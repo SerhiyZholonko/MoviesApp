@@ -36,14 +36,10 @@ struct PlayerView: View {
 
 
         }
+        .ignoresSafeArea()
     }
 }
 
-struct PlayerView_Previews: PreviewProvider {
-    static var previews: some View {
-        PlayerView()
-    }
-}
 
 
 
