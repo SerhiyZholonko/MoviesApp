@@ -46,6 +46,7 @@ enum Site: String, Codable {
 }
 
 enum TypeEnum: String, Codable {
+    case behindTheScenes = "Behind the Scenes"
     case clip = "Clip"
     case featurette = "Featurette"
     case teaser = "Teaser"

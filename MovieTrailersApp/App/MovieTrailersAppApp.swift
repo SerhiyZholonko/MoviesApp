@@ -9,14 +9,11 @@ import SwiftUI
 
 @main
 struct MovieTrailersAppApp: App {
-//    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
             MainTabBar()
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .navigationViewStyle(StackNavigationViewStyle())
-
         }
     }
 }

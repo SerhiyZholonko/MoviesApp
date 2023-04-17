@@ -33,12 +33,16 @@ struct MainTabBar: View {
                     .tabItem {
                         Label("Likes", systemImage: "heart")
                     }
-                Text("Settings")
-                    .tabItem {
-                        Label("Settings", systemImage: "gearshape")
-                    }
+                NavigationView {
+                    SettingsView()
+                }
+                        .tabItem {
+                            Label("Settings", systemImage: "gearshape")
+                        }
+                
+    
             }
-            .background(Color.blue) // Set the background color of the TabView to blue
+            .background(Color.blue)
 
 
     }
