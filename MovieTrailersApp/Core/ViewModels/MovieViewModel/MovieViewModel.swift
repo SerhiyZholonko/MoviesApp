@@ -20,13 +20,17 @@ final class MovieViewModel: ObservableObject {
     func loadMovies(page: Int) {
         AF.request("https://api.themoviedb.org/3/movie/now_playing?api_key=" + Constants.share.apiKey + "&language=en-US&page=\(page)")
             .validate()
-            .responseDecodable(of: Movies.self) { response in
+            .responseDecodable(of: Movies.self) { [weak self] response in
                 switch response.result {
                 case .success(let movie):
                     if page == 1 {
-                        self.moviews = movie.results
+                        DispatchQueue.main.async {
+                            self?.moviews = movie.results
+                        }
                     } else {
-                        self.moviews += movie.results
+                        DispatchQueue.main.async {
+                            self?.moviews += movie.results
+                        }
                     }
                 case .failure(let error):
                     print(error.localizedDescription)
