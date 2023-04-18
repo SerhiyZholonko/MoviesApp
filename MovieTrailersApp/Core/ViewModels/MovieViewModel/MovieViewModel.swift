@@ -16,7 +16,6 @@ final class MovieViewModel: ObservableObject {
     init() {
         loadMovies(page: currentPage)
     }
-
     func loadMovies(page: Int) {
         AF.request("https://api.themoviedb.org/3/movie/now_playing?api_key=" + Constants.share.apiKey + "&language=en-US&page=\(page)")
             .validate()

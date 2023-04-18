@@ -9,7 +9,6 @@ import SwiftUI
 
 @main
 struct MovieTrailersAppApp: App {
-
     var body: some Scene {
         WindowGroup {
             MainTabBar()
